@@ -4,14 +4,14 @@ This Python project automates the collection of operational data from Cisco IOS 
 
 🔧 Features
 
-•	SSH and Telnet connectivity using Netmiko
-•	Excel-based device input
-•	Multiple credential attempts per device
-•	Automated execution of Cisco show commands
-•	Per-device configuration and status export
-•	Timestamped logs for connection and execution status
-•	Failed devices highlighted directly in the Excel file
-•	Clean, modular code structure suitable for labs and GitHub portfolios
+    •  	SSH and Telnet connectivity using Netmiko
+    •	  Excel-based device input
+    •	  Multiple credential attempts per device
+    •	  Automated execution of Cisco show commands
+    •	  Per-device configuration and status export
+    •	  Timestamped logs for connection and execution status
+    •	  Failed devices highlighted directly in the Excel file
+    •	  Clean, modular code structure suitable for labs and GitHub portfolios
 
 📦 Requirements
 
@@ -23,10 +23,16 @@ This Python project automates the collection of operational data from Cisco IOS 
 
 1. Clone or download this repository.
 2. Install required Python libraries:
+   
+```bash
 pip install -r requirements.txt
+```
 📄 Input File
+
 An Excel file (.xlsx) containing device IP addresses in the first column. Each row represents one Cisco device.
+
 ▶ Usage
+
 SSH Automation:
 python cisco_ssh_show_commands.py
 
