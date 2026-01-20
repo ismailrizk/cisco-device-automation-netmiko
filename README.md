@@ -1,78 +1,77 @@
-# Cisco Device Automation using Netmiko
+Cisco Device Automation using Netmiko
 
-## Overview
-This repository provides Python automation scripts to collect operational data from Cisco IOS devices using Netmiko.
-It supports both SSH and Telnet connections and uses an Excel file as input for device IP addresses.
+This Python project automates the collection of operational data from Cisco IOS devices using SSH and Telnet with the Netmiko library.
+Device IP addresses are read from an Excel file, commands are executed automatically, and outputs are saved per device with logging and failure tracking.
 
-The scripts are designed for lab, testing, and learning purposes and follow a clean, modular structure suitable for GitHub portfolios.
+🔧 Features
 
----
+SSH and Telnet connectivity using Netmiko
 
-## Features
-- SSH and Telnet support
-- Excel-based device input
-- Multiple credential attempts
-- Automated execution of Cisco show commands
-- Per-device output files
-- Logging for troubleshooting
-- Failed devices highlighted directly in Excel
+Excel-based device input
 
----
+Multiple credential attempts per device
 
-## Repository Structure
-cisco-device-automation-netmiko/
-│
-├── ssh/
-│ └── cisco_ssh_device_collector.py
-│
-├── telnet/
-│ └── cisco_telnet_device_collector.py
-│
-├── input/
-│ └── IPS.xlsx
-│
-├── output/
-│ └── .gitkeep
-│
-├── logs/
-│ └── .gitkeep
-│
-├── requirements.txt
-├── README.md
-└── .gitignore
+Automated execution of Cisco show commands
 
----
+Per-device configuration and status export
 
-##Requirements
-• Python 3.8 or higher
-• Netmiko
-• openpyxl
+Timestamped logs for connection and execution status
 
----
+Failed devices highlighted directly in the Excel file
 
-##Input File Format
-The Excel file must contain device IP addresses in the first column only. Each row represents a single device.
+Clean, modular code structure suitable for labs and GitHub portfolios
 
----
+📦 Requirements
 
-##Usage
-SSH Automation:
+Python 3.8 or higher
+
+Network reachability to Cisco IOS devices
+
+Valid Cisco device credentials (SSH and/or Telnet enabled)
+
+🛠 Installation
+
+Clone or download this repository.
+
+Install required Python libraries:
+
+pip install -r requirements.txt
+
+📄 Input File
+
+An Excel file (.xlsx) containing device IP addresses in the first column
+
+Each row represents one Cisco device
+
+Example:
+
+IP Address
+192.168.40.8
+192.168.40.9
+▶ Usage
+SSH Automation
 python ssh/cisco_ssh_device_collector.py
 
-Telnet Automation:
+Telnet Automation
 python telnet/cisco_telnet_device_collector.py
 
-When prompted, provide the full path to the Excel file.
 
----
+When prompted, enter the full path to the Excel file:
 
-##Output
-• Command outputs are saved as text files per device
-• Logs are stored in the logs directory
-• Failed devices are marked in red inside the Excel file
+C:\path\to\devices.xlsx
 
----
+📁 Output
 
-##Notes
-Telnet is intended for lab or legacy environments only. SSH is recommended for production environments.
+Command output is saved as .txt files (one per device)
 
+Logs are written with timestamps for troubleshooting
+
+Devices that fail to connect are marked in red inside the Excel file
+
+⚠ Notes
+
+Telnet is intended for lab or legacy environments only
+
+SSH is recommended for production environments
+
+Executed commands can be customized inside each script
