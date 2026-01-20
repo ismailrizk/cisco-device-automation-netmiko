@@ -34,10 +34,10 @@ An Excel file (.xlsx) containing device IP addresses in the first column. Each r
 
 ## ▶ Usage
 
-SSH Automation:
+- SSH Automation:
 python cisco_ssh_show_commands.py
 
-Telnet Automation:
+- Telnet Automation:
 python cisco_Telnet_show_commands.py
 
 When prompted, enter the full path to the Excel file.
