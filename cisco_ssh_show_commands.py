@@ -4,7 +4,7 @@ import logging
 from openpyxl.styles import PatternFill
 import os
 
-# Logging
+
 logging.basicConfig(
     filename='ssh_logs.log',
     level=logging.INFO,
@@ -91,3 +91,4 @@ if __name__ == "__main__":
             )
 
     wb.save(excel_path)
+
